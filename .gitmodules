@@ -1,0 +1,3 @@
+[submodule "simplyview"]
+	path = simplyview
+	url = git@github.com:simplyedit/simplyview

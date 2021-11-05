@@ -1,0 +1,242 @@
+        html,body {
+            padding: 0;
+            margin: 0;
+        }
+        html {
+            height: 100%;
+        }
+        body {
+            min-height: 100%;
+        }
+        .slo-commit,
+        .slo-new {
+            width: 100%;
+        }
+        .slo-right {
+            margin-left: 0;
+        }
+        .slo-entiteit-changes {
+            overflow-y: auto;
+        }
+        .slo-title:empty:before {
+            content: "(Geen titel)";
+        }
+        .slo-entiteit-changes a {
+            color: inherit;
+            padding: inherit;
+        }
+        .slo-entiteit-change .slo-type {
+            margin-left: 5px;
+            max-width: 170px;
+        }
+        .slo-entity-select {
+            display: inline-flex;
+            max-width: 200px;
+            padding: 0;
+            padding-right: 30px;
+            margin: 0;
+            height: 28px;
+            margin-top: -2px;
+        }
+        .slo-id:empty:before {
+            content: "(Nieuw UUID)";
+        }
+        .slo-warning:not(:empty) + .slo-warning {
+            display: none;
+        }
+        .slo-label {
+            display: inline-block;
+        }
+        .slo-form-help {
+            font-size: 0.8em;
+            line-height: 1.5em;
+        }
+        label.slo-form-checkbox,
+        label.slo-form-radio {
+            padding-left: 1.5em;
+        }
+        .slo-form-checkbox input[type="checkbox"],
+        .slo-form-radio input[type="radio"] {
+            margin-left: -1.5em;
+            position: absolute;
+        }
+        textarea[data-simply-activate="autosize"] {
+            height: var(--slo-line-height);
+            resize: none;
+        }
+        .slo-profile {
+            display: grid;
+            grid-template-areas: "avatar name" 
+                                 "avatar button";
+        }
+        .slo-avatar {
+            grid-area: avatar;        
+            height: 40px;
+            margin: 10px;
+        }
+        .slo-username {
+            grid-area: name;
+            line-height: 38px;
+            height: 25px;
+            display: block;
+            white-space: nowrap;
+        }
+        .slo-logoff {
+            grid-area: button;
+            display: none;
+            line-height: 20px;
+        }
+        body.slo-logged-on .slo-logoff {
+            display: block;
+        }
+        .slo-hidden {
+            display: none;
+        }
+        .slo-treeview {
+            width: 50vw;
+            height: 75vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            float: left;
+        }
+        .slo-treeview-title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+            max-width: 100%;
+            text-decoration: none;
+            cursor: pointer;
+            position: relative;
+        }
+        .slo-treeview-title .slo-title {
+            line-height: 2em;
+        }
+        .slo-treeview-title.slo-selected .slo-title {
+            text-decoration: underline;
+        }
+        .slo-treeview-children {
+            padding-left: 1em;
+        }
+        .slo-treeview-filters {
+            display: flex;
+            flex-direction: row;
+            position: sticky;
+            top: 0;
+            padding: 0 1em;
+            background: white;
+            z-index: 100;
+        }
+        .slo-treeview-tree {
+            padding: 1em;
+        }
+        .slo-entity {
+            height: 75vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        .slo-tag {
+            vertical-align: middle;
+        }
+        .slo-tag a.slo-id {
+            text-decoration: none;
+            color: var(--font-color);
+        }
+        .slo-treeview .slo-tag {
+            white-space: nowrap;
+            max-width: 100px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            direction: rtl;
+        }
+        .slo-button-naked {
+            background: transparent;
+            margin: 0;
+        }
+
+        .slo-treeview-title:focus,
+        .slo-treeview-title:hover {
+            background-color: #EEE;
+        }
+        .slo-treeview-title:focus .slo-remove-button,
+        .slo-treeview-title:hover .slo-remove-button {
+            display: block;
+        }
+		.slo-tree-render > .slo-treeview-title + .slo-treeview-children {
+			display: none;
+		}
+		.slo-tree-render .slo-treeview-title.slo-open + .slo-treeview-children {
+			display: block;
+		}
+		
+        .slo-tag input {
+            display: inline-block;
+            width: auto;
+            padding: 0;
+            height: auto;
+        }
+        .slo-main-page header {
+            overflow: hidden;
+        }
+        .slo-parent-ids a ~ a:before {
+            content: '';
+            display: block;
+        }
+        ul.slo-nav-crumbs-block li {
+            display: block;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+	.slo-table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	.slo-table thead {
+		background-color: var(--medium-gray);
+		color: var(--medium-gray-contrast);
+	}
+	.slo-table thead th {
+		text-align: left;
+		padding: 2px 5px;
+	}
+	.slo-table tbody td {
+		border-bottom: 1px solid #888;
+		border-right: 1px solid #888;
+		padding: 2px 5px;
+	}
+	.slo-table tbody td:first-child {
+		border-left: 1px solid #888;
+		word-break: break-all;
+	}
+	.slo-excel-error {
+		margin-bottom: 1em;
+	}
+	.slo-excel-error-message {
+		font-size: 1.3em;
+		font-weight: bold;
+	}
+	.slo-file {
+		font-style: italic;
+	}
+	.slo-level {
+		font-style: italic;
+		margin: 0 0.5em;
+	}
+	.slo-changes {
+		margin-left: 1em;
+		padding-left: 1em;
+	}
+	.slo-changes-entity {
+		border-left: 2px solid green;
+		margin-bottom: 1em;
+	}
+	.slo-changes-entity-new {
+		border-left: 2px solid blue;
+	}
+    ins {
+        color: green;
+    }
+    del {
+        color: red;
+    }

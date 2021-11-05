@@ -1,0 +1,1 @@
+../../../simplyview/dist/simply.include.next.js

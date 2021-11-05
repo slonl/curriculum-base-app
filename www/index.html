@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+    <title>Curriculum Basis App</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/js/vanillaSelectBox.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/extra.css">
+    <!-- script src="https://cdn.lr-ingest.io/LogRocket.min.js" crossorigin="anonymous"></script -->
+    <script>
+        window.LogRocket && window.LogRocket.init('muze/entiteiten-editor');
+    </script>
+</head>
+<body class="slo-main-page">
+    <header class="slo-navbar">
+        <nav class="slo-navbar-left slo-logo bg-brand-gradient">
+            <a href="/"><img src="/assets/img/slo.png"></a>
+        </nav>
+        <div class="slo-navbar-left">
+            OpenData Portal: Basis App
+        </div>
+        <div class="slo-navbar-right slo-profile">
+            <img class="slo-avatar" data-simply-field="user.avatar_url">
+            <div class="slo-username" data-simply-field="user.name"></div>
+            <a href="#" class="slo-logoff" data-simply-command="logoff">Afmelden</a>
+        </div>
+    </header>
+    <div class="slo-navbar slo-navbar-side bg-gray">
+        <div class="slo-space">
+        </div>
+    </div>
+    <main class="slo-main slo-space-vertical" data-simply-field="page" data-simply-content="template" data-simply-default-value="upload">
+    </main>
+
+    <dialog id="login" class="slo-login">
+        <header class="bg-brand">
+            <img src="/assets/img/slo.png" class="slo-logo">
+        </header>
+        <section class="body">
+            <div class="slo-warning" data-simply-field="login-error"></div>
+            <div class="slo-warning">Aanmelden met uw Github account</div>
+            <form data-simply-command="login" method="POST">
+                <div class="group">
+                    <label>
+                        Naam
+                        <input type="text" name="username" id="username" data-simply-field="username" data-simply-element="username">
+                    </label>
+                </div>
+                <div class="group">
+                    <label>
+                        Wachtwoord
+                        <input type="password" name="password" data-simply-field="password" data-simply-element="password">
+                    </label>
+                </div>
+                <div class="group">
+                    <label>
+                        <input type="checkbox" name="savelogin" value="1" data-simply-field="savelogin" data-simply-element="savelogin">
+                        Bewaar mijn logingegevens op deze computer
+                    </label>
+                </div>
+                <br>
+                <button type="submit" class="slo-button slo-button-primary">Login
+                    <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+                </button>
+            </form>
+        </section>
+    </dialog>
+    
+    <div class="slo-dialog-overlay"></div>
+    
+	<script src="https://canary.simplyedit.io/1/simply-edit.js" data-simply-storage="none"></script>
+	<script src="/assets/js/GitHub.bundle.js"></script>
+	<script src="/assets/js/simply.everything.js"></script>
+
+	<script src="https://unpkg.com/json-schema-ref-parser@6.0.0/dist/ref-parser.min.js"></script>
+	<script src="https://unpkg.com/lodash@4.17.11/lodash.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ajv/6.12.6/ajv.min.js"
+		integrity="sha512-+WCxUYg8L1mFBIyL05WJAJRP2UWCy+6mvpMHQbjPDdlDVcgS4XYyPhw5TVvzf9Dq8DTD/BedPW5745dqUeIP5g=="
+		crossorigin="anonymous"></script>
+	
+	<script src="/assets/js/curriculum/curriculum.js"></script>
+	<script src="/assets/js/curriculum/transformers.js"></script>
+	<script src="/assets/js/curriculum/app.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="/assets/js/vanillaSelectBox.js"></script>
+</body>
+</html>
